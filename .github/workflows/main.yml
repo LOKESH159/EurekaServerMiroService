@@ -42,6 +42,7 @@ jobs:
         with:
 #     Required for permission to tag the repo.
          github_token: ${{ secrets.GITHUB_TOKEN }}
+         release_branches: lokesh
     # Which type of bump to use when none explicitly provided (default: `patch`).
 #     default_bump: # optional, default is patch
 #     # A prefix to the tag name (default: `v`).
