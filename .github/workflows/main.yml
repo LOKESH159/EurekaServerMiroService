@@ -43,6 +43,7 @@ jobs:
 #     Required for permission to tag the repo.
          github_token: ${{ secrets.GITHUB_TOKEN }}
          release_branches: lokesh
+         custom_tag: $(date +'%Y-%m-%dT%H:%M:%S')
     # Which type of bump to use when none explicitly provided (default: `patch`).
 #     default_bump: # optional, default is patch
 #     # A prefix to the tag name (default: `v`).
@@ -50,7 +51,7 @@ jobs:
 #     # A suffix to a pre-release tag name (default: `<branch>`).
 #     append_to_pre_release_tag: # optional
 #     # Custom tag name. If specified, it overrides bump settings.
-#     custom_tag: # optional
+#     custom_tag: $(date +'%Y-%m-%dT%H:%M:%S')
 #     # Comma separated list of release rules. Format: `<keyword>:<release_type>`. Example: `hotfix:patch,pre-feat:preminor`.
 #     custom_release_rules: # optional
 #     # Comma separated list of branches (bash reg exp accepted) that will generate the release tags. Other branches and pull-requests generate versions postfixed with the commit hash and do not generate any tag. Examples: `master` or `.*` or `release.*,hotfix.*,master`...
