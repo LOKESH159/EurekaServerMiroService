@@ -45,7 +45,10 @@ jobs:
 #     Required for permission to tag the repo.
          github_token: ${{ secrets.GITHUB_TOKEN }}
          release_branches: lokesh
-         custom_tag: ${{ env.NOW }}
+         custom_tag: ${{ env.NOW1 }}
+         env:
+           NOW1:$(date +"%Y%m%dT%H%M%S")
+#    custom_tag: ${{ env.NOW }}
     # Which type of bump to use when none explicitly provided (default: `patch`).
 #     default_bump: # optional, default is patch
 #     # A prefix to the tag name (default: `v`).
